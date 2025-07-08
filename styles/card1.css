@@ -1,0 +1,380 @@
+@font-face {
+  font-family: cuningham;
+  src: url(../fonts/Cuningham\ Singleton\ Italic.otf);
+}
+
+@font-face {
+  font-family: bluetea;
+  src: url(../fonts/Bluetea.ttf);
+}
+
+@font-face {
+  font-family: bp;
+  src: url(../fonts/Batuphat\ Script.otf);
+}
+
+@font-face {
+  font-family: beach sound;
+  src: url(../fonts/BeachSound.otf);
+}
+
+*, 
+*::before, 
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --color0: #fff;
+  --color1: #F25CA2;
+  --color2: #0433BF;
+  --color3: #032CA6;
+  --color4: #021859;
+  --color5: #0B9ED9;
+  --color6: #000;
+}
+
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+section {
+  margin: 1% 20%;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  background-color: var(--color4);
+}
+
+.container {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+nav {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  background-color: var(--color2);
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  border-radius: 50%;
+}
+
+.navbar-brand i {
+  font-size: 4rem;
+  color:var(--color0);
+  margin: auto;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 2rem;
+  font-family: bp;
+  text-decoration: none;
+  display: block;
+  margin: 0 2rem;
+  color: var(--color0);
+  text-transform: capitalize;
+  transform: scale(0);
+  transition: transform 650ms;
+}
+
+.nav-item {
+  position: relative;
+  line-height: 8rem;
+  transition-delay: .4s;
+  visibility: hidden;
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color1);
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 650ms cubic-bezier(.68, -.55, .265, 1.55);
+}
+
+.nav-item:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+} 
+
+.hamburger {
+  width: 3.6rem;
+  height: 1.8rem;
+  position: relative;
+  cursor: pointer;
+  line-height: 5rem;
+  z-index: 1500;
+}
+
+.hamburger .line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color0);
+  position: absolute;
+  display: block;
+  right: 0;
+  transition: all 650ms;
+}
+
+.hamburger .line:nth-child(1) {
+  top: 0;
+}
+
+.hamburger .line:nth-child(2) {
+  top: 50%;
+  margin-top: -1px;
+  width: 2.8rem;
+}
+
+.hamburger .line:nth-child(3) {
+  top: 100%;
+  margin-top: -2px;
+  width: 2rem;
+}
+
+.hamburger.active .line:nth-child(1) {
+  transform: translateY(.8rem) rotate(45deg);
+  width: 2rem;
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: translateY(-.8rem) rotate(-45deg);
+  width: 2rem;
+}
+
+
+.nav-list.active .nav-link {
+  transform: scale(1);
+}
+
+.nav-list.active .nav-item {
+  transition-delay: initial;
+  visibility: visible;
+}
+
+.nav-list.active .nav-item:nth-child(1) .nav-link {
+  transition-delay: .5s;
+}
+
+.nav-list.active .nav-item:nth-child(2) .nav-link {
+  transition-delay: .4s;
+}
+
+.nav-list.active .nav-item:nth-child(3) .nav-link {
+  transition-delay: .3s;
+}
+
+.nav-list.active .nav-item:nth-child(4) .nav-link {
+  transition-delay: .2s;
+}
+
+.nav-list.active .nav-item:nth-child(5) .nav-link {
+  transition-delay: .1s;
+}
+
+
+.nav-list .nav-item:nth-child(1) .nav-link {
+  transition-delay: .1s;
+}
+
+.nav-list .nav-item:nth-child(2) .nav-link {
+  transition-delay: .2s;
+}
+
+.nav-list .nav-item:nth-child(3) .nav-link {
+  transition-delay: .3s;
+}
+
+.nav-list .nav-item:nth-child(4) .nav-link {
+  transition-delay: .4s;
+}
+
+.nav-list .nav-item:nth-child(5) .nav-link {
+  transition-delay: .5s;
+}
+
+@media screen and (max-width: 768px) {
+
+    .nav-list {
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--color2);
+      position: fixed;
+      left: 0;
+      bottom: -100vh;
+      transform: bottom 650ms;
+    }
+
+    .nav-list.active {
+      bottom: 0;
+    }
+
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 30px;
+  font-family: beach sound;
+  color: #2200b9;
+}
+
+.orgchart {
+  margin-top: 2%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.puz {
+  border-radius: 20px;
+}
+
+.t-bq-quote-paul {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-height: 250px;
+  box-shadow: 2px 2px 25px #cecece;
+  border-radius: 10px;
+}
+
+.t-bq-quote-paul .t-bq-quote-paul-pattern {
+  flex-basis: 80px;
+  background: url("https://raw.githubusercontent.com/taviskaron/t-div-blockquotes/main/img/hexabump.png") repeat;
+  border-radius: 10px 0 0 10px;
+}
+
+.t-bq-quote-paul .t-bq-quote-paul-base {
+  flex-basis: calc(100% - 80px);
+  background: #F5F0EA;
+  padding: 40px 30px 50px 80px;
+  font-size: 11pt;
+  line-height: 1.62em;
+  border-radius: 0 10px 10px 0;
+  font-family: bluetea;
+}
+
+.t-bq-quote-paul .t-bq-quote-paul-qmark {
+  position: absolute;
+  top: 50px;
+  left: 105px;
+  font-family: Garamond, Georgia, "Times New Roman", serif;
+  font-size: 42pt;
+  color: #999999;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.t-bq-quote-paul .t-bq-quote-paul-userpic {
+  position: absolute;
+  top: 80px;
+  left: 35px;
+  width: 90px;
+  height: 90px;
+  background: url("../images/president.jpg") center center no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.t-bq-quote-paul .t-bq-quote-paul-meta {
+  margin-top: 30px;
+  padding-top: 10px;
+  border-top: 2px dotted #777777;
+}
+
+.t-bq-quote-paul .t-bq-quote-paul-meta .t-bq-quote-paul-author,
+.t-bq-quote-paul .t-bq-quote-paul-meta .t-bq-quote-paul-source {
+  color: #777777;
+}
+
+.t-bq-quote-paul .t-bq-quote-paul-meta .t-bq-quote-paul-author {
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 12pt;
+  font-weight: bold;
+  font-family: bluetea;
+}
+
+.t-bq-quote-paul .t-bq-quote-paul-meta .t-bq-quote-paul-source {
+  font-size: 10pt;
+  font-family: bluetea;
+}
+
+@media screen and (max-width: 768px) {
+
+    .t-bq-quote-paul .t-bq-quote-paul-pattern {
+        flex-basis: 20px;
+    }
+
+    .t-bq-quote-paul .t-bq-quote-paul-base {
+        flex-basis: calc(100% - 20px);
+        padding: 100px 30px 50px 30px;
+    }
+
+    .t-bq-quote-paul .t-bq-quote-paul-userpic {
+        width: 50px;
+        height: 50px;
+        left: 40px;
+        top: 20px;
+    }
+
+    .t-bq-quote-paul .t-bq-quote-paul-qmark {
+        left: 100px;
+        top: 45px;
+    }
+}
+
+.footer{
+  background: #021859;
+  color: #fff;
+  font-family: bluetea;
+  text-align: center;
+  font-size: 18px;
+  padding:1.5% 0px;
+  width: 100%;
+  bottom:0;
+}
