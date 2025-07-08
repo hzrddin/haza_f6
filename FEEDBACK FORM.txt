@@ -1,0 +1,13 @@
+FEEDBACK FORM LINK
+
+
+Check feedback using this link ---> (SPREADSHEET)
+{
+https://docs.google.com/spreadsheets/d/1gGrID94FdcoAO4sVagHyQ2zIMwws0_TgLOMlxdneIE8/edit#gid=0
+}
+
+
+(API-sheetdb)
+{
+https://sheetdb.io/api/v1/hum4ja5vzjzjy
+}
