@@ -11,6 +11,24 @@ theme: 'Royal Navy',
                   type: "holiday",
                   everyYear: true
                 },
+                {
+                  id: "devBday",
+                  name: "Website Developer Birthday",
+                  date: "November/14/2025",
+                  description: "Celebrate the dev!",
+                  type: "holiday",
+                  color: "#03f4fc",
+                  everyYear: true
+                },
+                  
+                {
+                  name: "Special Day",
+                  date: "December/19/2025",
+                  description: "Miss u",
+                  type: "event",
+                  color: "#ff006aff",
+                  everyYear: true
+                },
 
                 {
                   name: "Vacation Leave",
@@ -270,21 +288,7 @@ theme: 'Royal Navy',
                   description: "End Of Holidays",
                   type: "holiday",
                   color: "#c2b03a"
-                },
-
-                {
-                  name: "Website Developer Birthday",
-                  date: "November/14",
-                  type: "event",
-                  color: "#03f4fc"
-                },
-                
-                {
-                  name: "Special Day",
-                  date: "Disember/19",
-                  type: "event",
-                  color: "#ff006aff"
-                },
+              },
             ]
 
           })
