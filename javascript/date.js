@@ -273,10 +273,17 @@ theme: 'Royal Navy',
                 },
 
                 {
-                  name: "Special Day",
-                  date: "November/14/2022",
+                  name: "Website Developer Birthday",
+                  date: "November/14",
                   type: "event",
                   color: "#03f4fc"
+                },
+                
+                {
+                  name: "Special Day",
+                  date: "Disember/19",
+                  type: "event",
+                  color: "#ff006aff"
                 },
             ]
 
