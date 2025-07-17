@@ -6,3 +6,4 @@ index > main
 That's all.
 
 The file were restructure based on github default web deployment.
+link: https://hzrddin.github.io/haza_f6/
